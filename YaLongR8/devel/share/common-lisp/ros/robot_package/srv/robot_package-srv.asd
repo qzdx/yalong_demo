@@ -1,0 +1,26 @@
+
+(cl:in-package :asdf)
+
+(defsystem "robot_package-srv"
+  :depends-on (:roslisp-msg-protocol :roslisp-utils :sensor_msgs-msg
+)
+  :components ((:file "_package")
+    (:file "Claw" :depends-on ("_package_Claw"))
+    (:file "_package_Claw" :depends-on ("_package"))
+    (:file "ImageToFrame" :depends-on ("_package_ImageToFrame"))
+    (:file "_package_ImageToFrame" :depends-on ("_package"))
+    (:file "MoveABSJ" :depends-on ("_package_MoveABSJ"))
+    (:file "_package_MoveABSJ" :depends-on ("_package"))
+    (:file "MoveJ" :depends-on ("_package_MoveJ"))
+    (:file "_package_MoveJ" :depends-on ("_package"))
+    (:file "MoveL" :depends-on ("_package_MoveL"))
+    (:file "_package_MoveL" :depends-on ("_package"))
+    (:file "Servo" :depends-on ("_package_Servo"))
+    (:file "_package_Servo" :depends-on ("_package"))
+    (:file "VehicleCommModel" :depends-on ("_package_VehicleCommModel"))
+    (:file "_package_VehicleCommModel" :depends-on ("_package"))
+    (:file "VehicleControl" :depends-on ("_package_VehicleControl"))
+    (:file "_package_VehicleControl" :depends-on ("_package"))
+    (:file "VehicleServo" :depends-on ("_package_VehicleServo"))
+    (:file "_package_VehicleServo" :depends-on ("_package"))
+  ))

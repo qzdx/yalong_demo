@@ -1,0 +1,2 @@
+bringup/hipnuc_imu:bringup/hipnuc_lib_package:bringup/robot_package:bringup/ros_astra_camera:bringup/start_game:bringup/ydlidar_ros_driver
+-DCATKIN_DEVEL_PREFIX=/home/nvidia/YaLongR8/devel -DCMAKE_INSTALL_PREFIX=/home/nvidia/YaLongR8/install -G Unix Makefiles

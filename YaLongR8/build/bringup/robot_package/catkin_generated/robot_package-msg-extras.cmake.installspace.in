@@ -1,0 +1,2 @@
+set(robot_package_MESSAGE_FILES "msg/TR_Arm_Msg.msg;msg/TR_Vehicle_Msg.msg;msg/TR_Vehicle_IMU_Msg.msg;msg/MoveABSJAction.msg;msg/MoveABSJActionGoal.msg;msg/MoveABSJActionResult.msg;msg/MoveABSJActionFeedback.msg;msg/MoveABSJGoal.msg;msg/MoveABSJResult.msg;msg/MoveABSJFeedback.msg")
+set(robot_package_SERVICE_FILES "srv/MoveABSJ.srv;srv/MoveJ.srv;srv/MoveL.srv;srv/Servo.srv;srv/Claw.srv;srv/VehicleCommModel.srv;srv/VehicleServo.srv;srv/VehicleControl.srv;srv/ImageToFrame.srv")

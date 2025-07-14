@@ -1,0 +1,8 @@
+prefix=/home/nvidia/YaLongR8/devel
+
+Name: hipnuc_imu
+Description: Description of hipnuc_imu
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy std_msgs message_runtime geometry_msgs

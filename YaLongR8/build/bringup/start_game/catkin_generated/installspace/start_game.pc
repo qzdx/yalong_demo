@@ -1,0 +1,8 @@
+prefix=/home/nvidia/YaLongR8/install
+
+Name: start_game
+Description: Description of start_game
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
