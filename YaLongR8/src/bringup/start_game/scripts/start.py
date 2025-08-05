@@ -1,5 +1,8 @@
 #!/usr/bin/python
 # coding: utf-8
+
+
+# 313
 import rospy
 from geometry_msgs.msg import Twist
 from std_msgs.msg import String
@@ -37,47 +40,46 @@ if __name__ == "__main__":
     try:
         ctl = Controller()
         rospy.loginfo("+++++++++++[   move to  1   ]+++++++++++")
-        ctl.move(0.5,0,6.5)
+        ctl.move(0.5,0,5.5)
 
         time.sleep(5.5)
         rospy.loginfo("+++++++++++[     fly!       ]+++++++++++")
 
-        while (ctl.velocity_pub.get_num_connections() == 0 and not rospy.is_shutdown()):
-            rospy.loginfo("等待连接")
-            rospy.sleep(0.1)
-	   
-        ctl.velocity_pub.publish(ctl.fly_msg)
+        # while (ctl.velocity_pub.get_num_connections() == 0 and not rospy.is_shutdown()):
+#             rospy.loginfo("等待连接")
+#             rospy.sleep(0.1)
 
-        rospy.loginfo("info :")
-        rospy.loginfo(ctl.fly_msg)
+        # ctl.velocity_pub.publish(ctl.fly_msg)
+#
+#         rospy.loginfo("info :")
+#         rospy.loginfo(ctl.fly_msg)
 
         rospy.loginfo("+++++++++++[   began sleep  ]+++++++++++")
-        time.sleep(10)
+        time.sleep(5)
 
         rospy.loginfo("+++++++++++[    turn to 2      ]+++++++++++")
-        ctl.move(0,-0.5,3)
+        ctl.move(0,-0.5,2.3)
 
         rospy.loginfo("+++++++++++[    move to 2      ]+++++++++++")
-        ctl.move(0.5,0,6.9)
-        
+        ctl.move(0.5,0,6)
+
         time.sleep(1)
 
         rospy.loginfo("+++++++++++[    turn to c      ]+++++++++++")
         ctl.move(0,0.5,2.8)
 
         rospy.loginfo("+++++++++++[   move to  c   ]+++++++++++")
-        ctl.move(0.5,0,5.5)
+        ctl.move(0.5,0,5.1)
 
         rospy.loginfo("+++++++++++[   turn around   ]+++++++++++")
-        ctl.move(0,0.5,7.6)
+        ctl.move(0,0.5,6.4)
         time.sleep(4)
 
         rospy.loginfo("+++++++++++[   go home ...   ]+++++++++++")
-        ctl.move(0.5,0,17.2)
+        ctl.move(0.5,0,15)
 
         time.sleep(1)
         ctl.velocity_pub.publish(ctl.land_msg)
 
     except rospy.ROSInterruptException:
         rospy.loginfo("fail")
-
